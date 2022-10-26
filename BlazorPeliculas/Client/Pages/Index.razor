@@ -1,0 +1,63 @@
+﻿@page "/"
+@inject ServiciosSingleton singleton;
+@inject IRepositorio repositorio
+
+<p>Single count:@singleton.Valor </p>
+
+<p>Hola, @UtilidadesString.Enmayuscular(nombre)</p>
+<p>Vamos a sumar 2  + 2 = @(2+2)</p>
+<!--expresion anonima-->
+<!--<button @onclick="@(()=> Console.WriteLine("Matenmeeee"))"></button>-->
+<div>
+<h3 >pelicula</h3>
+  <ListadoPeliculas Peliculas="peliculas" >
+             
+  </ListadoPeliculas>
+</div>
+
+<div>
+    <h2>
+        crear pelicula
+        <EjemploTextBox @attributes="@(new Dictionary<string,object>()
+{
+        {"placeholder","gokuuuuu"},
+        {"disabled","true"}
+}
+)" />
+    </h2>
+</div>
+
+
+<!--todo es codigo c# !-->
+<button @onclick="AgregarPelicula">click</button>
+
+@code {
+    void AgregarPelicula()
+    {
+        peliculas.Add(new Pelicula() { Titulo = "shrek", Lanzamiento = DateTime.Today });
+    }
+
+
+
+    string nombre = "Felipe";
+    private List<Pelicula> peliculas ;
+    protected override void OnInitialized()
+    {
+        peliculas = repositorio.ObtenerPeliculas();
+    }
+    }
+ 
+    public Pelicula Spiderman { get { return ObtenerPelicula(); } }
+
+    private Pelicula ObtenerPelicula() {
+        return new Pelicula() { Titulo = "Spiderman", Lanzamiento = new DateTime(2019, 7, 2) };
+    }
+
+  
+
+    //string Enmayuscular(string valor) => valor.ToUpper();
+    private void manejarClick()
+    {
+        Console.WriteLine("me clic desde metodo!");
+    }
+}
