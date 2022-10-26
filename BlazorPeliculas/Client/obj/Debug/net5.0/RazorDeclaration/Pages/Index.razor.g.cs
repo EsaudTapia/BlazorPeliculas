@@ -122,12 +122,28 @@ using BlazorPeliculas.Client.Repositorios;
 
 
     string nombre = "Felipe";
+    
     private List<Pelicula> peliculas ;
     protected override void OnInitialized()
     {
+        
         peliculas = repositorio.ObtenerPeliculas();
     }
     
+ 
+    public Pelicula Spiderman { get { return ObtenerPelicula(); } }
+
+    private Pelicula ObtenerPelicula() {
+        return new Pelicula() { Titulo = "Spiderman", Lanzamiento = new DateTime(2019, 7, 2) };
+    }
+
+  
+
+    //string Enmayuscular(string valor) => valor.ToUpper();
+    private void manejarClick()
+    {
+        Console.WriteLine("me clic desde metodo!");
+    }
 
 #line default
 #line hidden

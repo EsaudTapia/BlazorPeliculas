@@ -642,3 +642,5 @@ C:\Users\franc\source\repos\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net
 C:\Users\franc\source\repos\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net5.0\Razor\Shared\EjemploTextBox.razor.g.cs
 C:\Users\franc\source\repos\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net5.0\RazorDeclaration\Shared\ListadoGenerico.razor.g.cs
 C:\Users\franc\source\repos\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net5.0\Razor\Shared\ListadoGenerico.razor.g.cs
+C:\Users\franc\source\repos\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net5.0\RazorDeclaration\Shared\Confirmacion.razor.g.cs
+C:\Users\franc\source\repos\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net5.0\Razor\Shared\Confirmacion.razor.g.cs
